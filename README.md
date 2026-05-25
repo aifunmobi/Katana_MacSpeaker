@@ -48,6 +48,23 @@ Likely not to work with:
 
 ## Install
 
+### One-Line Install
+
+Install the checked-in binary and a double-clickable Desktop launcher:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/aifunmobi/Katana_MacSpeaker/main/install.sh | bash
+```
+
+This installs:
+
+```text
+~/.local/bin/katana-macspeaker
+~/Desktop/boss.command
+```
+
+Turn on/connect the Katana, then double-click `boss.command` on your Desktop.
+
 ### Ready-to-Run Download
 
 The repo includes prebuilt files in `dist/`:
