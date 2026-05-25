@@ -1,4 +1,4 @@
-# Katana_MacSpeaker
+# Katana_MacSpeaker for BOSS Katana
 
 Katana_MacSpeaker is a small macOS utility for BOSS Katana owners who want normal Mac audio to come out of the amp speaker over USB.
 
