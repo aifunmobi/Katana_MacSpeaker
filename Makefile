@@ -4,11 +4,18 @@ SWIFTC ?= swiftc
 SRC := Sources/KatanaMacSpeaker/main.swift
 BIN := .build/release/katana-macspeaker
 
-.PHONY: build install uninstall desktop-launcher test clean
+.PHONY: build dist install uninstall desktop-launcher test clean
 
 build:
 	mkdir -p .build/release
 	$(SWIFTC) $(SRC) -o $(BIN)
+
+dist: build
+	mkdir -p dist
+	cp "$(BIN)" dist/katana-macspeaker
+	cp scripts/boss.command dist/boss.command
+	chmod +x dist/katana-macspeaker dist/boss.command
+	@echo "Updated dist/katana-macspeaker and dist/boss.command"
 
 install: build
 	mkdir -p "$(BINDIR)"

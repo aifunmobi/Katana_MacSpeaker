@@ -48,6 +48,28 @@ Likely not to work with:
 
 ## Install
 
+### Ready-to-Run Download
+
+The repo includes prebuilt files in `dist/`:
+
+```text
+dist/katana-macspeaker
+dist/boss.command
+```
+
+To use the checked-in build, download the repo, keep both files in the same folder, then double-click `boss.command`. If you prefer to rebuild the checked-in files yourself, run `make dist`.
+
+If macOS blocks the downloaded command or binary, remove quarantine in Terminal:
+
+```sh
+xattr -dr com.apple.quarantine dist/katana-macspeaker dist/boss.command
+chmod +x dist/katana-macspeaker dist/boss.command
+```
+
+Then double-click `dist/boss.command` again.
+
+### Build From Source
+
 You need the macOS command line tools or Xcode so `swiftc` is available.
 
 ```sh
